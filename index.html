@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sandbox</title>
+</head>
+<body>
+    <input type="button" value="example" data-id="test" onclick="myf( this )">
+
+<script>
+    function myf( val ){
+    
+        console.log ( val.getAttribute("data-id") );
+    
+    }
+
+window.addEventListener('load', function () {
+
+
+});
+
+</script>
+</body>
+</html>
