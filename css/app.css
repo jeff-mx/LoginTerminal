@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    color:lime;
+    background-color: black;
+}
+
+body{
+    
+    margin: 0;
+    display: flex;
+    justify-content: center; /* center items vertically */
+    align-items: center;     /* center items horizontally */
+}
+
+.container{
+
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 100px;
+    width: 350px;
+
+}
+
+#userSpan{
+    animation: blink 1s linear infinite;
+}
+
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}

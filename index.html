@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sandbox</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="button" value="example" data-id="test" onclick="myf( this )">
 
-<script>
-    function myf( val ){
-    
-        console.log ( val.getAttribute("data-id") );
-    
-    }
+    <div class="container">
+        
+        <div class="userInput">
+            <label for="user">User:</label>
+            <span id="userSpan">|</span>
+        </div>
 
-window.addEventListener('load', function () {
+        <div class="passInput">
+            <label for="user">Password:</label>
+            <span>#</span>
+        </div>
 
+        <p>press enter</p>
 
-});
+    </div>
 
-</script>
+<script src="js/app.js"></script>
 </body>
 </html>
