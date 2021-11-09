@@ -5,8 +5,6 @@ document.addEventListener('keydown', function (event) {
     let element;
     let textContent;
 
-    //document.querySelector(".userInput").lastChild.remove();
-
     if ( stage === 0 ){   
         element = document.getElementById ('userSpan');
     }else if ( stage === 1 ){
@@ -32,7 +30,6 @@ document.addEventListener('keydown', function (event) {
         if ( stage === 0 ){
             
             document.getElementById ('passInput').classList.toggle('hiden');
-            //document.getElementById ("cursor").classList.add("hiden");
             document.getElementById ("cursor").remove();
 
             createCursor( "passInput" );
@@ -62,8 +59,6 @@ document.addEventListener('keydown', function (event) {
         resetForm ();
         
     }
-
-    //user.remove (  );
 
 });
 
