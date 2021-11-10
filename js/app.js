@@ -1,4 +1,5 @@
 var stage = 0;
+var enableFlag = true;
 
 document.addEventListener('keydown', function (event) {
 
@@ -25,7 +26,7 @@ document.addEventListener('keydown', function (event) {
         
         }
     
-    }else if ( event.key === "Enter" ){
+    }else if ( event.key === "Enter" && textContent.length > 0 ){
 
         if ( stage === 0 ){
             
@@ -36,7 +37,10 @@ document.addEventListener('keydown', function (event) {
 
             stage = 1;
 
-        }else if ( stage === 1 ){
+        }else if ( stage === 1 && enableFlag ){
+            
+            enableFlag = false;
+            document.getElementById ("cursor").remove();
 
             let newDiv = document.createElement("div");
             newDiv.setAttribute ("id", "alert");
@@ -46,9 +50,10 @@ document.addEventListener('keydown', function (event) {
             setTimeout ( function (){
 
                 resetForm ();
-                document.getElementById ("cursor").remove();
                 document.getElementById ("alert").remove();
                 createCursor( "userInput" );
+
+                enableFlag = true;
 
             } , 2000 );
 
@@ -74,7 +79,7 @@ function resetForm (){
 function createCursor( elementID ){
 
     let newSpan = document.createElement("span");
-    let txt = document.createTextNode("|");
+    let txt = document.createTextNode("█");
 
     newSpan.setAttribute ("id", "cursor");
     newSpan.appendChild (txt);
