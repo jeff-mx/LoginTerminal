@@ -20,7 +20,7 @@ document.addEventListener('keydown', function (event) {
 
             if ( stage === 0 ){
                 element.textContent = textContent + event.key;
-            }else if ( stage === 1){
+            }else if ( stage === 1 && enableFlag ){
                 element.textContent = textContent + "*";
             }
         
